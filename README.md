@@ -13,7 +13,7 @@ MSE stands for Mean Squared Error, which is the distance calculation used in ord
 
 ## How it works
 
-In short, the program creates at every iteration N mutations (random ellipses) stemming from the same parent. Whichever mutation improves the distance the most is kept, and the process is repeated M times. Even though the outcome is random, N and M determine the quality of the image produced since they allow for more exploration at the cost of longer calculation times. 
+In short, the program creates, at every iteration, N mutations (random ellipses) stemming from the same parent. Whichever mutation improves the distance the most is kept, and the process is repeated M times. Even though the outcome is random, N and M determine the quality of the image produced since they allow for more exploration at the cost of longer calculation times. 
 
 ## Running it on your machine
 
