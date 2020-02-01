@@ -1,4 +1,4 @@
-# GeneticAlgorithmImage
+# Genetic Algorithm Image Duplication
 
 > This program seeks to replicate as accurately as possible an image with a genetic algorithm-like process by drawing random ellipse mutations on a blank canvas and retaining mutations that reduce the most the distance between both work-in-progress and source image. 
 
