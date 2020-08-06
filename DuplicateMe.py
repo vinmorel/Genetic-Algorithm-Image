@@ -66,7 +66,7 @@ def Save_to_Disk(logs, img_dir, img):
             print("Saved logs at {output_dir}")
         else:
             cv2.imwrite(output_dir,img)
-            print("Saved images at {output_dir}")
+            print("Saved image at {output_dir}")
             
 class Canvas:
     """
@@ -147,7 +147,9 @@ def main(img_dir,k,n_generations=200,m_candidates=100, verbose=0):
         The number of generations to evolve from. The default is 200.
     n_mutations : (int), optional
         The number of mutations to create per generation. The default is 100.
-
+    verbose : (bool), optional
+        A boolean to decide if you want updates on the image being built at every 100th generation. 
+        The default is 0. 
     """
     src_img = cv2.imread(img_dir)
     cvs = Canvas(src_img,k)

@@ -5,9 +5,9 @@
 ## Results 
 These examples demonstrate a timelapse of the image replication process at every iteration, where the best mutation is retained. 
 
-![Showcase1](/header_animated.gif) ![source1](/Source/pika_source.jpg)  
+![Showcase1](/Assets/header_animated.gif) ![source1](/Assets/pika_source.jpg)  
 
-![Showcase2](/header_animated_2.gif) ![source2](/Source/louis_source.png) 
+![Showcase2](/Assets/header_animated_2.gif) ![source2](/Assets/louis_source.png) 
 
 MSE stands for Mean Squared Error, which is the distance calculation used in order to compare the work-in-progress (left) to the source image (right). It is sort of an euclidean distance, where every pixel RGB is compared between both images. 
 
@@ -22,16 +22,26 @@ You will need to install the following libraries :
 - [Pandas 0.25.3](https://anaconda.org/conda-forge/pandas)
 - [OpenCV 4.0.1](https://anaconda.org/anaconda/opencv)
 
-You will also need to change the directories in approx45.py to the ones that match your cloned repository.
+Run the script from a command prompt: 
+python DuplicateMe.py img_dir  C:/.../img.png k [int] --n_generations [int] --m_candidates [int] --verbose [bool]
+>>> MSE : 5956339 	 Progress : 337/800
+>>> MSE : 5956290 	 Progress : 338/800
+>>> MSE : 5950198 	 Progress : 339/800
+>>> ...
+>>> Saved logs at C:/.../logs.txt
+>>> Saved image at C:/.../image.png
 
 When running it, the inputs are the following: 
-- Path : Drag and drop your source image into console
-- Project_name : The project name. Will create folders on computer to store info with this name.
-- N_Ellipses : Number of ellipses that will be drawn in total on canvas. I recommend at least 500-1000 for a decent image.
-- N_Mutations : Number of mutations per iteration. Exploratory variable, the more the better but also the longer.
-- K : Number of dominant colors in source image. I recommend simple cartoonish images. For example, the pikachu has probably 5 colors (red, black, dark yellow, light yellow, brown)
-- bkg : starting background color. Helps image replication so you don't need to waste ellipse iterations on filling background. 255 fot white, 0 for black. 
-- verbose (optional) : 0 or 1 depending if you want to see calculations info in console. 
+- img_dir : (string) 
+The path of the image to be duplicated using this genetic algorithm. 
+- K : (int)
+The number of different colors to sample from during the mutations. Adjust this variable in accordance to the number of distinct colors on your image. 
+- n_iterations : (int), optional
+The number of generations to evolve from. The default is 200.
+- n_mutations : (int), optional
+The number of mutations to create per generation. The default is 100.
+- verbose : (bool), optional
+A boolean to decide if you want updates on the image being built at every 100th generation. The default is 0. 
 
 ## Acknowledgments
 
