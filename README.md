@@ -29,7 +29,7 @@ python DuplicateMe.py img_dir  C:/.../img.png k [int] --n_generations [int] --m_
 > MSE : 5950198 	 Progress : 339/800 \
 > ... \
 > Saved logs at C:/.../logs.txt \
-> Saved image at C:/.../image.png \
+> Saved image at C:/.../image.png 
 
 When running it, the inputs are the following: 
 - img_dir : (string) 
