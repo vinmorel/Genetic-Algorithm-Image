@@ -121,7 +121,7 @@ while N <= N_Ellipses:
         lt = random.randint(0,h)
         lg = random.randint(0,w)
         # Precision by generation 
-        s1 = random.randint(0,(h//(math.log10((N**6)+20))))
+        s1 = np.random.normal(0,(h//(math.log10((N**6)+20))))
         s2 = random.randint(0,(w//(math.log10((N**6)+20))))  
       
         # If no results yet, draw random ellipse on blank
