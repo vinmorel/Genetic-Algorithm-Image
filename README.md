@@ -24,12 +24,12 @@ You will need to install the following libraries :
 
 Run the script from a command prompt: 
 python DuplicateMe.py img_dir  C:/.../img.png k [int] --n_generations [int] --m_candidates [int] --verbose [bool]
-> MSE : 5956339 	 Progress : 337/800 
-> MSE : 5956290 	 Progress : 338/800
-> MSE : 5950198 	 Progress : 339/800
-> ...
-> Saved logs at C:/.../logs.txt
-> Saved image at C:/.../image.png
+> MSE : 5956339 	 Progress : 337/800 \
+> MSE : 5956290 	 Progress : 338/800 \
+> MSE : 5950198 	 Progress : 339/800 \
+> ... \
+> Saved logs at C:/.../logs.txt \
+> Saved image at C:/.../image.png \
 
 When running it, the inputs are the following: 
 - img_dir : (string) 
