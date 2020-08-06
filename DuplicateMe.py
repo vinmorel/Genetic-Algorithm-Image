@@ -63,10 +63,10 @@ def Save_to_Disk(logs, img_dir, img):
         if folder == 'logs':
             with open(output_dir, "wb+") as f:
                 pickle.dump(logs, f)  
-            print("Saved logs at {output_dir}")
+            print(f"Saved logs at {output_dir}")
         else:
             cv2.imwrite(output_dir,img)
-            print("Saved image at {output_dir}")
+            print(f"Saved image at {output_dir}")
             
 class Canvas:
     """
