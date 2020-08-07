@@ -13,8 +13,8 @@ import random
 import pickle
 import numpy as np
 from PIL import Image
-from os import path
-from os.path import isfile, join, split, splitext, abspath
+from os import path, mkdir
+from os.path import isfile, isdir, join, split, splitext, abspath
 from datetime import datetime
 
 
@@ -49,7 +49,11 @@ def Save_to_Disk(logs, img_dir, img):
     folders['results'] = 'png'
     
     for folder, ext in folders.items():
+        folder_dir = str(join(project_root_path,folder))
         output_dir = str(join(project_root_path,folder,f"{fname}.{ext}"))
+        
+        if not isdir(folder_dir):
+            mkdir(folder_dir)
         
         if isfile(output_dir):
             base_path, file = split(output_dir)
