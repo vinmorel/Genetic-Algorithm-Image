@@ -41,9 +41,7 @@ def Save_to_Disk(logs, img_dir, img):
     """
     base_path, file = split(img_dir)
     fname, ext = splitext(file)
-    
-    project_root_path = abspath(path.dirname(__file__))
-    
+        
     folders = {}
     folders['logs'] = 'txt'
     folders['results'] = 'png'
