@@ -18,30 +18,43 @@ In short, the program creates, at every iteration, N mutations (random ellipses)
 ## Running it on your machine
 
 You will need to install the following libraries :
-- [Numpy 1.17.5](https://anaconda.org/conda-forge/numpy)
-- [Pandas 0.25.3](https://anaconda.org/conda-forge/pandas)
-- [OpenCV 4.0.1](https://anaconda.org/anaconda/opencv)
+```
+cd Genetic-Algorithm-Image
+pip install -r requirements.txt
+```
 
-Run the script from a command prompt: 
+Run the script from CLI: 
+```
 python DuplicateMe.py img_dir  C:/.../img.png k [int] --n_generations [int] --m_candidates [int] --verbose [bool]
-> MSE : 5956339 	 Progress : 337/800 \
-> MSE : 5956290 	 Progress : 338/800 \
-> MSE : 5950198 	 Progress : 339/800 \
-> ... \
-> Saved logs at C:/.../logs.txt \
-> Saved image at C:/.../image.png 
+```
+```
+out[1]:
+MSE : 5956339 	 Progress : 337/800 
+MSE : 5956290 	 Progress : 338/800 
+MSE : 5950198 	 Progress : 339/800 
+... 
+Saved logs at C:/.../logs.txt 
+Saved image at C:/.../image.png 
+```
 
-When running it, the inputs are the following: 
-- img_dir : (string) 
+The arguments are the following: 
+
+```img_dir (string)``` :
 The path of the image to be duplicated using this genetic algorithm. 
-- K : (int)
-The number of different colors to sample from during the mutations. Adjust this variable in accordance to the number of distinct colors on your image. 
-- n_iterations : (int), optional
+        
+```K (int)``` :
+The number of different colors to sample from during the mutations. Strongly suggested to 
+adjust this variable in accordance to your image. 
+        
+```n_iterations (int), optional``` :
 The number of generations to evolve from. The default is 200.
-- n_mutations : (int), optional
+        
+```n_mutations (int), optional``` :
 The number of mutations to create per generation. The default is 100.
-- verbose : (bool), optional
-A boolean to decide if you want updates on the image being built at every 100th generation. The default is 0. 
+        
+```verbose (bool), optional``` :
+A boolean to decide if you want updates on the image being built at every 100th generation. 
+The default is 0. 
 
 ## Acknowledgments
 
