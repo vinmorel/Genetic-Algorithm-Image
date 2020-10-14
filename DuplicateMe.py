@@ -49,20 +49,17 @@ def Save_to_Disk(logs, img_dir, img):
     folders['results'] = 'png'
     
     for folder, ext in folders.items():
-        folder_dir = str(join(project_root_path,folder))
-        output_dir = str(join(project_root_path,folder,f"{fname}.{ext}"))
+        folder_dir = str(join(base_path,folder))
+        output_dir = str(join(base_path,folder,f"{fname}.{ext}"))
         
         if not isdir(folder_dir):
             mkdir(folder_dir)
         
         if isfile(output_dir):
-            base_path, file = split(output_dir)
-            fname, ext = splitext(file)
             now = datetime.now()
             dt_string = now.strftime("%H%M%S")
-            fname += dt_string
-        
-            output_dir = join(base_path,fname)
+            new_fname = fname + dt_string + '.' + ext
+            output_dir = join(base_path,folder,new_fname)
         
         if folder == 'logs':
             with open(output_dir, "wb+") as f:
