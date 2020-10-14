@@ -17,13 +17,13 @@ In short, the program creates, at every iteration, N mutations (random ellipses)
 
 ## Running it on your machine
 
-You will need to install the following libraries :
+### Install the dependencies
 ```
 cd Genetic-Algorithm-Image
 pip install -r requirements.txt
 ```
 
-Run the script from CLI: 
+### Run from CLI
 ```
 python DuplicateMe.py img_dir  C:/.../img.png k [int] --n_generations [int] --m_candidates [int] --verbose [bool]
 ```
